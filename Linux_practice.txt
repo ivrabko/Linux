@@ -1,0 +1,38 @@
+root@LAPTOP-********:~# mkdir file_1 file_2
+root@LAPTOP-********:~# ls
+file_1  file_2
+root@LAPTOP-********:~# mv file_2 document_2
+root@LAPTOP-********:~# ls
+document_2  file_1
+root@LAPTOP-********:~# touch 123.txt
+root@LAPTOP-********:~# ls
+123.txt  document_2  file_1
+root@LAPTOP-********:~# mv 123.txt document_2
+root@LAPTOP-********:~# ls
+document_2  file_1
+root@LAPTOP-********:~# ls document_2
+123.txt
+root@LAPTOP-********:~# echo "Hello World!"
+Hello World!
+root@LAPTOP-********:~# cd document_2
+~/document_2# cp 123.txt 123_clone.txt
+~/document_2# ls
+123.txt  123_clone.txt
+~/document_2# echo "apple">123.txt
+~/document_2# cat 123.txt
+apple
+~/document_2# cd /root
+root@LAPTOP-********:~# ls
+document_2  file_1
+root@LAPTOP-********:~# rmdir file_1
+root@LAPTOP-********:~# ls
+document_2
+root@LAPTOP-********:~# ping htmlbook.ru
+PING htmlbook.ru (185.200.243.101) 56(84) bytes of data.
+64 bytes from vds-cl02466.timeweb.ru (185.200.243.101): icmp_seq=1 ttl=54 time=26.6 ms
+64 bytes from vds-cl02466.timeweb.ru (185.200.243.101): icmp_seq=2 ttl=54 time=26.1 ms
+64 bytes from vds-cl02466.timeweb.ru (185.200.243.101): icmp_seq=3 ttl=54 time=28.0 ms
+^C
+--- htmlbook.ru ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 26.100/26.915/28.026/0.813 ms
